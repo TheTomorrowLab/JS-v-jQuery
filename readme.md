@@ -1,15 +1,5 @@
 #JS v. jQuery
 
-<style>
-table {
-	font:13px "lucida grande", arial, sans-serif;
-	text-align:left;
-	border-spacing:20px;
-}
-tr:nth-child(even)	{ background:#f0f0f0; }
-pre					{ margin:0; }
-</style>
-
 <table>
 	<thead>
 		<tr>
