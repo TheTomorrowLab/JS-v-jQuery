@@ -1,189 +1,195 @@
 #JS v. jQuery
 
-<table>
-<thead>
-<tr><th>jQuery</th>
-<th>JavaScript</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>
+Here is a list of common jQuery tasks with their JS counterparts.
+
+## Seeing if the Document is ready
+
+### jQuery
+
 <pre>
 $(document).ready(function() {
-	// code…
+	// codeâ€¦
 });
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 document.addEventListener("DOMContentLoaded", function() {
-	// code…
+	// codeâ€¦
 });
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
-<pre>
+## Selecting Divs
+
+### jQuery
+
 var divs = $("div");
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 var divs = document.querySelectorAll("div");
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Creating Divs
+
+### jQuery
+
 <pre>
 var newDiv = $("&lt;div/>");
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 var newDiv = document.createElement("div");
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Adding a Class
+
+### jQuery
+
 <pre>
 newDiv.addClass("foo");
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 newDiv.classList.add("foo");
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Toggling a Class
+
+### jQuery
+
 <pre>
 newDiv.toggleClass("foo");
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 newDiv.classList.toggle("foo");
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## On Click
+
+### jQuery
+
 <pre>
 $("a").click(function() {
-	// code…
+	// codeâ€¦
 });
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 [].forEach.call(document.querySelectorAll("a"), function(el) {
 	el.addEventListener("click", function() {
-		// code…
+		// codeâ€¦
 	});
 });
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Appending Divs
+
+### jQuery
+
 <pre>
 $("body").append($("&lt;p/>"));
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 document.body.appendChild(document.createElement("p"));
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Setting Attributes
+
+### jQuery
+
 <pre>
 $("img").filter(":first").attr("alt", "My image");
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 document.querySelector("img").setAttribute("alt", "My image");
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Setting Parent
+
+### jQuery
+
 <pre>
 var parent = $("#about").parent();
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 var parent = document.getElementById("about").parentNode;
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Cloning Element
+
+### jQuery
+
 <pre>
 var clonedElement = $("#about").clone();
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 var clonedElement = document.getElementById("about").cloneNode(true);
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Emptying an Element
+
+### jQuery
+
 <pre>
 $("#wrap").empty();
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 var wrap = document.getElementById("wrap");
 while(wrap.firstChild) wrap.removeChild(wrap.firstChild);
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Testing if an Element is Empty
+
+### jQuery
+
 <pre>
 if($("#wrap").is(":empty"))
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 if(!document.getElementById("wrap").hasChildNodes())
 </pre>
-</td>
-</tr>
 
-<tr>
-<td>
+## Next Element
+
+### jQuery
+
 <pre>
 var nextElement = $("#wrap").next();
 </pre>
-</td>
-<td>
+
+### JS
+
 <pre>
 var nextElement = document.getElementById("wrap").nextSibling;
 </pre>
-</td>
-</tr>
-</tbody>
-</table>
